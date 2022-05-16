@@ -1,5 +1,6 @@
-package io.infinity.domain;
+package io.infinity.domain.po;
 
+import io.infinity.domain.BaseEntity;
 import lombok.*;
 
 /**
@@ -34,14 +35,14 @@ public class User extends BaseEntity {
     private String salt;
 
     /**
+     * 用户状态（0.禁用 1.正常 2.注销 ）
+     */
+    private Integer status;
+
+    /**
      * 地址
      */
     private String address;
-
-    /**
-     * 年龄
-     */
-    private Integer age;
 
     /**
      * 性别 0: 男; 1:女;

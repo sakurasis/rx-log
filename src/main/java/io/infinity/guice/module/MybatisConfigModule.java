@@ -2,7 +2,7 @@ package io.infinity.guice.module;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
-import io.infinity.common.util.YamlFileUtil;
+import io.infinity.common.util.PropertyUtil;
 import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 import org.mybatis.guice.MyBatisModule;
 import org.mybatis.guice.datasource.druid.DruidDataSourceProvider;
@@ -20,12 +20,9 @@ public class MybatisConfigModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        Map<String, Object> propertyMap = YamlFileUtil.readYaml(new File("db.yml"));
-        Map<String, String> settingMap = new ConcurrentHashMap<>(16);
-        propertyMap.forEach((key, value) -> {
-            settingMap.put(key, String.valueOf(value));
-        });
-        Names.bindProperties(binder(), settingMap);
+
+        Names.bindProperties(binder(), PropertyUtil.loadProperties(""));
+        //
         this.install(new MyBatisModule() {
             @Override
             protected void initialize() {

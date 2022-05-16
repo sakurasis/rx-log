@@ -2,7 +2,6 @@ package io.infinity.domain;
 
 import lombok.Data;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -15,7 +14,6 @@ import java.time.LocalDateTime;
 @Data
 public class BaseEntity implements Serializable {
 
-    @Serial
     private static final long serialVersionUID = 1126589596707365459L;
 
     /**

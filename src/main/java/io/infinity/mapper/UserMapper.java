@@ -1,5 +1,6 @@
 package io.infinity.mapper;
 
+import com.google.inject.Singleton;
 import io.infinity.domain.po.User;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
  * @function UserMapper
  * @date 2022/5/15 23:02
  */
+@Singleton
 public interface UserMapper {
 
     /**

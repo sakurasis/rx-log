@@ -10,13 +10,13 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <vertx.version>4.2.7</vertx.version>
+        <vertx.version>4.3.0</vertx.version>
         <mybatis.version>3.5.9</mybatis.version>
         <mybatis.guice.version>3.17</mybatis.guice.version>
         <vavr.version>0.10.4</vavr.version>
         <druid.version>1.2.9</druid.version>
-        <guice.version>5.1.0</guice.version>
-        <fastjson.version>2.0.2</fastjson.version>
+        <guice.version>4.2.3</guice.version>
+        <fastjson.version>2.0.3</fastjson.version>
         <canal.client.version>1.1.5</canal.client.version>
         <guice.multibindings.version>4.2.3</guice.multibindings.version>
     </properties>
@@ -92,11 +92,11 @@
             <artifactId>fastjson</artifactId>
             <version>${fastjson.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.alibaba.otter</groupId>
-            <artifactId>canal.client</artifactId>
-            <version>${canal.client.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.otter</groupId>-->
+<!--            <artifactId>canal.client</artifactId>-->
+<!--            <version>${canal.client.version}</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>

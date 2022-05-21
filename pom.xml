@@ -8,17 +8,17 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <vertx.version>4.3.0</vertx.version>
         <mybatis.version>3.5.9</mybatis.version>
         <mybatis.guice.version>3.17</mybatis.guice.version>
         <vavr.version>0.10.4</vavr.version>
         <druid.version>1.2.9</druid.version>
-        <guice.version>4.2.3</guice.version>
+        <guice.version>5.1.0</guice.version>
         <fastjson.version>2.0.3</fastjson.version>
         <canal.client.version>1.1.5</canal.client.version>
-        <guice.multibindings.version>4.2.3</guice.multibindings.version>
+        <junit.version>4.13.2</junit.version>
     </properties>
 
     <dependencies>
@@ -54,8 +54,9 @@
         </dependency>
         <dependency>
             <groupId>com.google.inject.extensions</groupId>
-            <artifactId>guice-multibindings</artifactId>
-            <version>${guice.multibindings.version}</version>
+            <artifactId>guice-testlib</artifactId>
+            <version>${guice.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -120,7 +121,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
